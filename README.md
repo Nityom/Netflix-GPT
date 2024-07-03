@@ -2,9 +2,11 @@
 - Create React App
 - Configured TalwindCSS
 - Header
+- Routing
 - Login Form
 - Sign /up Form
-
+- Form validation
+- useRef Hook
  
 # Features
 - Login/Signup
