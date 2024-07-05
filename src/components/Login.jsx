@@ -11,7 +11,7 @@ const Login = () => {
     const [isSignInForm, setIsSignInForm] = useState(true);
     const [errorMessage, setErrorMessage] = useState(null);
     const [loading, setLoading] = useState(false);
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const dispatch = useDispatch();
     const name = useRef(null);
     const email = useRef(null);
@@ -42,7 +42,7 @@ const Login = () => {
             createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
                 .then((userCredential) => {
                     const user = userCredential.user;
-                    console.log(`User signed up: ${user.email}`);
+                   
                     return updateProfile(auth.currentUser, {
                         displayName: name.current.value,
                         photoURL: "https://avatars.githubusercontent.com/u/112824495?v=4"
@@ -54,8 +54,8 @@ const Login = () => {
                     dispatch(
                         addUser({uid: uid , email:email, displayName:displayName,photoURL:photoURL,})
                     );
-                    console.log('Profile updated!');
-                    navigate("/browse");
+                 
+                 
                 })
                 .catch((error) => {
                     setErrorMessage(error.message);
@@ -68,8 +68,6 @@ const Login = () => {
             signInWithEmailAndPassword(auth, email.current.value, password.current.value)
                 .then((userCredential) => {
                     const user = userCredential.user;
-                    console.log(`User signed in: ${user.email}`);
-                    navigate("/browse");
                 })
                 .catch((error) => {
                     setErrorMessage(error.message);
