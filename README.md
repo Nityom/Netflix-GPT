@@ -28,6 +28,9 @@
 - update the store with teaser video data
 - Embedded the youtube video make it autoplay and mute
 - added talwind classes to make MainContainer look awesome
+- added movie categories usig API
+- Build GPT search feature
+- fetched the mobvies from GPT
 
 
 # Features
