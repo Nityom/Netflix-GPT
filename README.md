@@ -1,4 +1,4 @@
-
+# Live Preview : https://netflixgpt.netlify.app/
 
 # Netflix GPT
 
